@@ -92,8 +92,8 @@ BEGIN
     AUTORADIOBUTTON "使用 OpenVPN 配置文件设置", ID_RB_PROXY_OPENVPN, 13, 16, 200, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "使用系统代理设置", ID_RB_PROXY_MSIE, 13, 31, 200, 10
     AUTORADIOBUTTON "手动配置", ID_RB_PROXY_MANUAL, 13, 46, 79, 10
-    AUTORADIOBUTTON "HTTP 代理", ID_RB_PROXY_HTTP, 20, 62, 90, 10, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "SOCKS 代理", ID_RB_PROXY_SOCKS, 120, 62, 90, 10
+    AUTORADIOBUTTON "HTTP 代理服务器", ID_RB_PROXY_HTTP, 20, 62, 90, 10, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "套接字代理服务器", ID_RB_PROXY_SOCKS, 120, 62, 90, 10
     LTEXT "地址:", ID_TXT_PROXY_ADDRESS, 20, 77, 32, 10
     RTEXT "端口:", ID_TXT_PROXY_PORT, 171, 77, 20, 10
     EDITTEXT ID_EDT_PROXY_ADDRESS, 53, 75, 117, 12, ES_AUTOHSCROLL
@@ -147,16 +147,16 @@ BEGIN
     IDS_TIP_DEFAULT "OpenVPN GUI "
     IDS_TIP_CONNECTED "\n已连接到: "
     IDS_TIP_CONNECTING "\n正在连接到: "
-    IDS_TIP_CONNECTED_SINCE "\nConnected since: "
-    IDS_TIP_ASSIGNED_IP "\nAssigned IP: %s"
-    IDS_MENU_SERVICE "OpenVPN Service"
+    IDS_TIP_CONNECTED_SINCE "\n已连接自: "
+    IDS_TIP_ASSIGNED_IP "\n已分配的 IP: %s"
+    IDS_MENU_SERVICE "OpenVPN 服务"
     IDS_MENU_SETTINGS "设置…"
     IDS_MENU_CLOSE "退出"
     IDS_MENU_CONNECT "连接"
     IDS_MENU_DISCONNECT "断开"
-    IDS_MENU_STATUS "Show Status"
-    IDS_MENU_VIEWLOG "View Log"
-    IDS_MENU_EDITCONFIG "Edit Config"
+    IDS_MENU_STATUS "显示状态"
+    IDS_MENU_VIEWLOG "查看日志"
+    IDS_MENU_EDITCONFIG "编辑配置"
     IDS_MENU_PASSPHRASE "更改密码"
     IDS_MENU_SERVICE_START "开始"
     IDS_MENU_SERVICE_STOP "停止"
@@ -164,14 +164,14 @@ BEGIN
     IDS_MENU_SERVICEONLY_START "连接"
     IDS_MENU_SERVICEONLY_STOP "断开"
     IDS_MENU_SERVICEONLY_RESTART "重新连接"
-    IDS_MENU_ASK_STOP_SERVICE "Do you want to disconnect (Stop the OpenVPN Service)?"
+    IDS_MENU_ASK_STOP_SERVICE "您想要断开（停止 OpenVPN 服务）吗？"
 
     /* Logviewer - Resources */
-    IDS_ERR_START_LOG_VIEWER "Error starting log-viewer: %s"
-    IDS_ERR_START_CONF_EDITOR "Error starting config-editor: %s"
+    IDS_ERR_START_LOG_VIEWER "启动日志查看器时出现错误: %s"
+    IDS_ERR_START_CONF_EDITOR "启动配置编辑器时出现错误: %s"
 
     /* OpenVPN */
-    IDS_ERR_MANY_CONFIGS "OpenVPN GUI does not support more than %d configs. Please contact the author if you have the need for more."
+    IDS_ERR_MANY_CONFIGS "OpenVPN GUI 支持最多 %d 个配置。您如果需要更多的配置，请与作者联系。"
     IDS_ERR_ONE_CONN_OLD_VER "You can only have one connection running at the same time when using an older version on OpenVPN than 2.0-beta6."
     IDS_ERR_STOP_SERV_OLD_VER "You cannot use OpenVPN GUI to start a connection while the OpenVPN Service is running (with OpenVPN 1.5/1.6). Stop OpenVPN Service first if you want to use OpenVPN GUI."
     IDS_ERR_CREATE_EVENT "CreateEvent failed on exit event: %s"
@@ -189,8 +189,8 @@ BEGIN
     IDS_NFO_STATE_WAIT_TERM "Current State: Waiting for OpenVPN to terminate..."
     IDS_NFO_STATE_CONNECTED "Current State: Connected"
     IDS_NFO_NOW_CONNECTED "%s is now connected."
-    IDS_NFO_ASSIGN_IP "Assigned IP: %s"
-    IDS_ERR_CERT_EXPIRED "Unable to connect because your certificate has expired or the system time is incorrect."
+    IDS_NFO_ASSIGN_IP "已分配的 IP: %s"
+    IDS_ERR_CERT_EXPIRED "不能连接，因为您的证书已过期或系统时间不正确。"
     IDS_ERR_CERT_NOT_YET_VALID "Unable to connect because your certificate is not yet valid. Check that your system time is correct."
     IDS_NFO_STATE_RECONNECTING "Current State: Reconnecting"
     IDS_NFO_STATE_DISCONNECTED "Current State: Disconnected"
@@ -202,12 +202,12 @@ BEGIN
     IDS_NFO_STATE_SUSPENDED "Current State: Suspended"
     IDS_ERR_READ_STDOUT_PIPE "Error reading from OpenVPN StdOut Pipe."
     IDS_ERR_CREATE_EDIT_LOGWINDOW "Creating RichEdit LogWindow Failed!!"
-    IDS_ERR_SET_SIZE "Set Size failed!"
+    IDS_ERR_SET_SIZE "设置大小失败！"
     IDS_ERR_AUTOSTART_CONF "Cannot find requested config to autostart: %s"
     IDS_ERR_CREATE_PIPE_IN_READ "CreatePipe on hInputRead failed."
-    IDS_NFO_STATE_CONNECTING "Current State: Connecting"
-    IDS_NFO_CONNECTION_XXX "OpenVPN Connection (%s)"
-    IDS_NFO_STATE_CONN_SCRIPT "Current State: Running Connect Script"
+    IDS_NFO_STATE_CONNECTING "当前状态: 正在连接"
+    IDS_NFO_CONNECTION_XXX "OpenVPN 连接 (%s)"
+    IDS_NFO_STATE_CONN_SCRIPT "当前状态： 运行连接脚本"
     IDS_NFO_STATE_DISCONN_SCRIPT "Current State: Running Disconnect Script"
     IDS_ERR_RUN_CONN_SCRIPT "Error running Connect Script: %s"
     IDS_ERR_GET_EXIT_CODE "Failed to get ExitCode of Connect Script (%s)"
@@ -266,9 +266,9 @@ BEGIN
     IDS_ERR_HTTP_PROXY_PORT "You must specify a HTTP proxy port."
     IDS_ERR_HTTP_PROXY_PORT_RANGE "You must specify a HTTP proxy port between 1-65535"
     IDS_ERR_SOCKS_PROXY_ADDRESS "You must specify a SOCKS proxy address."
-    IDS_ERR_SOCKS_PROXY_PORT "You must specify a SOCKS proxy port."
-    IDS_ERR_SOCKS_PROXY_PORT_RANGE "You must specify a SOCKS proxy port between 1-65535"
-    IDS_ERR_CREATE_REG_HKCU_KEY "Error creating ""HKEY_CURRENT_USER\\%s"" key."
+    IDS_ERR_SOCKS_PROXY_PORT "您必须指定一个套接字代理服务器端口。"
+    IDS_ERR_SOCKS_PROXY_PORT_RANGE "您必须指定一个套接字代理服务器端口介于 1-65535 之间"
+    IDS_ERR_CREATE_REG_HKCU_KEY "创建 ""HKEY_CURRENT_USER\\%s"" 键时出错。"
     IDS_ERR_GET_TEMP_PATH "Error determining TempPath with GetTempPath(). Using "" C:\\ "" instead."
 
     /* service */
@@ -288,10 +288,10 @@ BEGIN
     IDS_ERR_READING_REGISTRY "Error reading registry value (HKLM\\SOFTWARE\\OpenVPN)."
     IDS_ERR_PASSPHRASE_ATTEMPTS "Registry value ""passphrase_attempts"" must be a number between 1 and 9."
     IDS_ERR_CONN_SCRIPT_TIMEOUT "Registry value ""connectscript_timeout"" must be a number between 0 and 99."
-    IDS_ERR_DISCONN_SCRIPT_TIMEOUT "Registry value ""disconnectscript_timeout"" must be a number between 1 and 99."
+    IDS_ERR_DISCONN_SCRIPT_TIMEOUT "注册表值 ""disconnectscript_timeout"" 必须是介于 1 和 99 之间的数字。"
     IDS_ERR_PRECONN_SCRIPT_TIMEOUT "Registry value ""preconnectscript_timeout"" must be a number between 1 and 99."
     IDS_ERR_CREATE_REG_KEY "Error creating HKLM\\SOFTWARE\\OpenVPN-GUI key."
     IDS_ERR_OPEN_WRITE_REG "Failed to open the registry for writing. You need to run this application " "once as Administrator to update the registry."
-    IDS_ERR_READ_SET_KEY "Error reading and setting registry key ""%s""."
-    IDS_ERR_WRITE_REGVALUE "Error writing registry value ""HKEY_CURRENT_USER\\%s\\%s""."
+    IDS_ERR_READ_SET_KEY "读取和设置注册表键 ""%s"" 时出错。"
+    IDS_ERR_WRITE_REGVALUE "写入注册表值 ""HKEY_CURRENT_USER\\%s\\%s"" 时出错。"
 END
