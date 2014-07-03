@@ -7,4 +7,4 @@
 
 -------------------------------
 
-LICENSE: The MIT License (MIT)
+LICENSE: GNU GPL v3
