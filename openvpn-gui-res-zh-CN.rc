@@ -29,25 +29,25 @@ CAPTION "OpenVPN"
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
-    LTEXT "ÊäÈëÃÜÂë:", 201, 6, 6, 100, 10
+    LTEXT "è¾“å…¥å¯†ç :", 201, 6, 6, 100, 10
     EDITTEXT ID_EDT_PASSPHRASE, 6, 17, 107, 12, ES_PASSWORD | ES_AUTOHSCROLL
-    PUSHBUTTON "È·¶¨", IDOK, 6, 33, 50, 14
-    PUSHBUTTON "È¡Ïû", IDCANCEL, 64, 33, 50, 14
+    PUSHBUTTON "ç¡®å®š", IDOK, 6, 33, 50, 14
+    PUSHBUTTON "å–æ¶ˆ", IDCANCEL, 64, 33, 50, 14
 END
 
 /* Auth Username/Password Dialog */
 ID_DLG_AUTH DIALOG 6, 18, 160, 62
 STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | DS_CENTER | DS_SETFOREGROUND
-CAPTION "OpenVPN - ÓÃ»§Éí·ÝÑéÖ¤"
+CAPTION "OpenVPN - ç”¨æˆ·èº«ä»½éªŒè¯"
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
-    LTEXT "ÓÃ»§Ãû:", 0, 6, 9, 50, 10
-    LTEXT "ÃÜÂë:", 0, 6, 26, 50, 10
+    LTEXT "ç”¨æˆ·å:", 0, 6, 9, 50, 10
+    LTEXT "å¯†ç :", 0, 6, 26, 50, 10
     EDITTEXT ID_EDT_AUTH_USER, 60, 6, 94, 12, ES_AUTOHSCROLL
     EDITTEXT ID_EDT_AUTH_PASS, 60, 23, 94, 12, ES_PASSWORD | ES_AUTOHSCROLL
-    PUSHBUTTON "È·¶¨", IDOK, 20, 42, 50, 14, BS_PUSHBUTTON | WS_TABSTOP | WS_DISABLED
-    PUSHBUTTON "È¡Ïû", IDCANCEL, 90, 42, 52, 14
+    PUSHBUTTON "ç¡®å®š", IDOK, 20, 42, 50, 14, BS_PUSHBUTTON | WS_TABSTOP | WS_DISABLED
+    PUSHBUTTON "å–æ¶ˆ", IDCANCEL, 90, 42, 52, 14
 END
 
 /* Status Dialog */
@@ -57,27 +57,27 @@ CAPTION "OpenVPN"
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
-    LTEXT "ÕýÔÚÁ¬½Ó¡­", ID_TXT_STATUS, 20, 5, 200, 10
-    PUSHBUTTON "¶Ï¿ª", ID_DISCONNECT, 50, 190, 50, 14
-    PUSHBUTTON "ÖØÐÂÁ¬½Ó", ID_RESTART, 150, 190, 50, 14
-    PUSHBUTTON "Òþ²Ø", ID_HIDE, 100, 190, 50, 14
+    LTEXT "æ­£åœ¨è¿žæŽ¥â€¦", ID_TXT_STATUS, 20, 5, 200, 10
+    PUSHBUTTON "æ–­å¼€", ID_DISCONNECT, 50, 190, 50, 14
+    PUSHBUTTON "é‡æ–°è¿žæŽ¥", ID_RESTART, 150, 190, 50, 14
+    PUSHBUTTON "éšè—", ID_HIDE, 100, 190, 50, 14
 END
 
 /* Change Passphrase Dialog */
 ID_DLG_CHGPASS DIALOG 6, 18, 193, 82
 STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | DS_CENTER
-CAPTION "OpenVPN - ¸ü¸ÄÃÜÂë"
+CAPTION "OpenVPN - æ›´æ”¹å¯†ç "
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
-    LTEXT "¾ÉÃÜÂë:", 171, 6, 9, 85, 10
-    LTEXT "ÐÂÃÜÂë:", 172, 6, 26, 85, 10
-    LTEXT "È·ÈÏÐÂÃÜÂë:", 173, 6, 42, 85, 10
+    LTEXT "æ—§å¯†ç :", 171, 6, 9, 85, 10
+    LTEXT "æ–°å¯†ç :", 172, 6, 26, 85, 10
+    LTEXT "ç¡®è®¤æ–°å¯†ç :", 173, 6, 42, 85, 10
     EDITTEXT ID_EDT_PASS_CUR, 95, 6, 90, 12, ES_PASSWORD | ES_AUTOHSCROLL
     EDITTEXT ID_EDT_PASS_NEW, 95, 23, 90, 12, ES_PASSWORD | ES_AUTOHSCROLL
     EDITTEXT ID_EDT_PASS_NEW2, 95, 39, 90, 12, ES_PASSWORD | ES_AUTOHSCROLL
-    PUSHBUTTON "È·¶¨", IDOK, 40, 59, 50, 14
-    PUSHBUTTON "È¡Ïû", IDCANCEL, 103, 59, 50, 14
+    PUSHBUTTON "ç¡®å®š", IDOK, 40, 59, 50, 14
+    PUSHBUTTON "å–æ¶ˆ", IDCANCEL, 103, 59, 50, 14
     LTEXT "", ID_TXT_KEYFORMAT, 0, 0, 0, 0
     LTEXT "", ID_TXT_KEYFILE, 0, 0, 0, 0
 END
@@ -85,18 +85,18 @@ END
 /* Proxy Settings Dialog */
 ID_DLG_PROXY DIALOG 6, 18, 249, 104
 STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | DS_CENTER
-CAPTION "´úÀí"
+CAPTION "ä»£ç†"
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
     GROUPBOX "   ", 201, 6, 46, 235, 52
-    AUTORADIOBUTTON "Ê¹ÓÃ OpenVPN ÅäÖÃÎÄ¼þÉèÖÃ", ID_RB_PROXY_OPENVPN, 13, 16, 200, 10, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "Ê¹ÓÃÏµÍ³´úÀíÉèÖÃ", ID_RB_PROXY_MSIE, 13, 31, 200, 10
-    AUTORADIOBUTTON "ÊÖ¶¯ÅäÖÃ", ID_RB_PROXY_MANUAL, 13, 46, 79, 10
-    AUTORADIOBUTTON "HTTP ´úÀí·þÎñÆ÷", ID_RB_PROXY_HTTP, 20, 62, 90, 10, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "Ì×½Ó×Ö´úÀí·þÎñÆ÷", ID_RB_PROXY_SOCKS, 120, 62, 90, 10
-    LTEXT "µØÖ·:", ID_TXT_PROXY_ADDRESS, 20, 77, 32, 10
-    RTEXT "¶Ë¿Ú:", ID_TXT_PROXY_PORT, 171, 77, 20, 10
+    AUTORADIOBUTTON "ä½¿ç”¨ OpenVPN é…ç½®æ–‡ä»¶è®¾ç½®", ID_RB_PROXY_OPENVPN, 13, 16, 200, 10, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "ä½¿ç”¨ç³»ç»Ÿä»£ç†è®¾ç½®", ID_RB_PROXY_MSIE, 13, 31, 200, 10
+    AUTORADIOBUTTON "æ‰‹åŠ¨é…ç½®", ID_RB_PROXY_MANUAL, 13, 46, 79, 10
+    AUTORADIOBUTTON "HTTP ä»£ç†æœåŠ¡å™¨", ID_RB_PROXY_HTTP, 20, 62, 90, 10, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "å¥—æŽ¥å­—ä»£ç†æœåŠ¡å™¨", ID_RB_PROXY_SOCKS, 120, 62, 90, 10
+    LTEXT "åœ°å€:", ID_TXT_PROXY_ADDRESS, 20, 77, 32, 10
+    RTEXT "ç«¯å£:", ID_TXT_PROXY_PORT, 171, 77, 20, 10
     EDITTEXT ID_EDT_PROXY_ADDRESS, 53, 75, 117, 12, ES_AUTOHSCROLL
     EDITTEXT ID_EDT_PROXY_PORT, 196, 75, 30, 12, ES_AUTOHSCROLL
 END
@@ -104,75 +104,75 @@ END
 /* General Settings Dialog */
 ID_DLG_GENERAL DIALOGEX 6, 18, 249, 104
 STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | DS_CENTER
-CAPTION "³£¹æ"
+CAPTION "å¸¸è§„"
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
-    GROUPBOX "ÓÃ»§½çÃæ", 201, 6, 12, 235, 30
-    LTEXT "ÓïÑÔ:", ID_TXT_LANGUAGE, 17, 25, 52, 12
+    GROUPBOX "ç”¨æˆ·ç•Œé¢", 201, 6, 12, 235, 30
+    LTEXT "è¯­è¨€:", ID_TXT_LANGUAGE, 17, 25, 52, 12
     COMBOBOX ID_CMB_LANGUAGE, 57, 23, 171, 400, CBS_DROPDOWNLIST | WS_TABSTOP
 END
 
 /* About Dialog */
 ID_DLG_ABOUT DIALOG 6, 18, 249, 104
 STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_CENTER
-CAPTION "¹ØÓÚ"
+CAPTION "å…³äºŽ"
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
     ICON ID_ICO_APP, 0, 8, 16, 21, 20
     LTEXT "OpenVPN GUI v" PACKAGE_VERSION " - A Windows GUI for OpenVPN\n" "Copyright (C) 2004-2005 Mathias Sundman <info@openvpn.se>\n" "http://openvpn.se/", 0, 36, 15, 206, 26
-    LTEXT "OpenVPN - Ò»¸öÓÃÓÚ½¨Á¢°²È«ËíµÀ IP ÍøÂçµÄÓ¦ÓÃ³ÌÐò " "over a single UDP port, with support for SSL/TLS-based " "session authentication and key exchange, packet " "encryption, packet authentication, and packet compression.\n" "\n" "Copyright (C) 2002-2005 OpenVPN Solutions LLC <info@openvpn.net>\n" "http://openvpn.net/", 0, 8, 45, 235, 56
+    LTEXT "OpenVPN - ä¸€ä¸ªç”¨äºŽå»ºç«‹å®‰å…¨éš§é“ IP ç½‘ç»œçš„åº”ç”¨ç¨‹åº " "over a single UDP port, with support for SSL/TLS-based " "session authentication and key exchange, packet " "encryption, packet authentication, and packet compression.\n" "\n" "Copyright (C) 2002-2005 OpenVPN Solutions LLC <info@openvpn.net>\n" "http://openvpn.net/", 0, 8, 45, 235, 56
 END
 
 /* Proxy Authentication Dialog */
 ID_DLG_PROXY_AUTH DIALOG 29, 23, 154, 65
 STYLE DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | DS_CENTER
-CAPTION "OpenVPN - ´úÀíÉí·ÝÑéÖ¤"
+CAPTION "OpenVPN - ä»£ç†èº«ä»½éªŒè¯"
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
-    LTEXT "ÓÃ»§Ãû:", 201, 9, 8, 38, 10
+    LTEXT "ç”¨æˆ·å:", 201, 9, 8, 38, 10
     EDITTEXT ID_EDT_PROXY_USER, 49, 5, 94, 12, ES_AUTOHSCROLL
-    LTEXT "ÃÜÂë:", 202, 9, 26, 38, 10
+    LTEXT "å¯†ç :", 202, 9, 26, 38, 10
     EDITTEXT ID_EDT_PROXY_PASS, 49, 23, 94, 12, ES_PASSWORD | ES_AUTOHSCROLL
-    PUSHBUTTON "È·¶¨", IDOK, 58, 43, 40, 14, BS_PUSHBUTTON | WS_TABSTOP | WS_DISABLED
+    PUSHBUTTON "ç¡®å®š", IDOK, 58, 43, 40, 14, BS_PUSHBUTTON | WS_TABSTOP | WS_DISABLED
 END
 
 STRINGTABLE
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 BEGIN
-    IDS_LANGUAGE_NAME "SimpliFied Chinese"
+    IDS_LANGUAGE_NAME "ç®€ä½“ä¸­æ–‡ - SimpliFied Chinese"
 
     /* Tray - Resources */
     IDS_TIP_DEFAULT "OpenVPN GUI "
-    IDS_TIP_CONNECTED "\nÒÑÁ¬½Óµ½: "
-    IDS_TIP_CONNECTING "\nÕýÔÚÁ¬½Óµ½: "
-    IDS_TIP_CONNECTED_SINCE "\nÒÑÁ¬½Ó×Ô: "
-    IDS_TIP_ASSIGNED_IP "\nÒÑ·ÖÅäµÄ IP: %s"
-    IDS_MENU_SERVICE "OpenVPN ·þÎñ"
-    IDS_MENU_SETTINGS "ÉèÖÃ¡­"
-    IDS_MENU_CLOSE "ÍË³ö"
-    IDS_MENU_CONNECT "Á¬½Ó"
-    IDS_MENU_DISCONNECT "¶Ï¿ª"
-    IDS_MENU_STATUS "ÏÔÊ¾×´Ì¬"
-    IDS_MENU_VIEWLOG "²é¿´ÈÕÖ¾"
-    IDS_MENU_EDITCONFIG "±à¼­ÅäÖÃ"
-    IDS_MENU_PASSPHRASE "¸ü¸ÄÃÜÂë"
-    IDS_MENU_SERVICE_START "¿ªÊ¼"
-    IDS_MENU_SERVICE_STOP "Í£Ö¹"
-    IDS_MENU_SERVICE_RESTART "ÖØÆô"
-    IDS_MENU_SERVICEONLY_START "Á¬½Ó"
-    IDS_MENU_SERVICEONLY_STOP "¶Ï¿ª"
-    IDS_MENU_SERVICEONLY_RESTART "ÖØÐÂÁ¬½Ó"
-    IDS_MENU_ASK_STOP_SERVICE "ÄúÏëÒª¶Ï¿ª£¨Í£Ö¹ OpenVPN ·þÎñ£©Âð£¿"
+    IDS_TIP_CONNECTED "\nå·²è¿žæŽ¥åˆ°: "
+    IDS_TIP_CONNECTING "\næ­£åœ¨è¿žæŽ¥åˆ°: "
+    IDS_TIP_CONNECTED_SINCE "\nå·²è¿žæŽ¥è‡ª: "
+    IDS_TIP_ASSIGNED_IP "\nå·²åˆ†é…çš„ IP: %s"
+    IDS_MENU_SERVICE "OpenVPN æœåŠ¡"
+    IDS_MENU_SETTINGS "è®¾ç½®â€¦"
+    IDS_MENU_CLOSE "é€€å‡º"
+    IDS_MENU_CONNECT "è¿žæŽ¥"
+    IDS_MENU_DISCONNECT "æ–­å¼€"
+    IDS_MENU_STATUS "æ˜¾ç¤ºçŠ¶æ€"
+    IDS_MENU_VIEWLOG "æŸ¥çœ‹æ—¥å¿—"
+    IDS_MENU_EDITCONFIG "ç¼–è¾‘é…ç½®"
+    IDS_MENU_PASSPHRASE "æ›´æ”¹å¯†ç "
+    IDS_MENU_SERVICE_START "å¼€å§‹"
+    IDS_MENU_SERVICE_STOP "åœæ­¢"
+    IDS_MENU_SERVICE_RESTART "é‡å¯"
+    IDS_MENU_SERVICEONLY_START "è¿žæŽ¥"
+    IDS_MENU_SERVICEONLY_STOP "æ–­å¼€"
+    IDS_MENU_SERVICEONLY_RESTART "é‡æ–°è¿žæŽ¥"
+    IDS_MENU_ASK_STOP_SERVICE "æ‚¨æƒ³è¦æ–­å¼€ï¼ˆåœæ­¢ OpenVPN æœåŠ¡ï¼‰å—ï¼Ÿ"
 
     /* Logviewer - Resources */
-    IDS_ERR_START_LOG_VIEWER "Æô¶¯ÈÕÖ¾²é¿´Æ÷Ê±³öÏÖ´íÎó: %s"
-    IDS_ERR_START_CONF_EDITOR "Æô¶¯ÅäÖÃ±à¼­Æ÷Ê±³öÏÖ´íÎó: %s"
+    IDS_ERR_START_LOG_VIEWER "å¯åŠ¨æ—¥å¿—æŸ¥çœ‹å™¨æ—¶å‡ºçŽ°é”™è¯¯: %s"
+    IDS_ERR_START_CONF_EDITOR "å¯åŠ¨é…ç½®ç¼–è¾‘å™¨æ—¶å‡ºçŽ°é”™è¯¯: %s"
 
     /* OpenVPN */
-    IDS_ERR_MANY_CONFIGS "OpenVPN GUI Ö§³Ö×î¶à %d ¸öÅäÖÃ¡£ÄúÈç¹ûÐèÒª¸ü¶àµÄÅäÖÃ£¬ÇëÓë×÷ÕßÁªÏµ¡£"
+    IDS_ERR_MANY_CONFIGS "OpenVPN GUI æ”¯æŒæœ€å¤š %d ä¸ªé…ç½®ã€‚æ‚¨å¦‚æžœéœ€è¦æ›´å¤šçš„é…ç½®ï¼Œè¯·ä¸Žä½œè€…è”ç³»ã€‚"
     IDS_ERR_ONE_CONN_OLD_VER "You can only have one connection running at the same time when using an older version on OpenVPN than 2.0-beta6."
     IDS_ERR_STOP_SERV_OLD_VER "You cannot use OpenVPN GUI to start a connection while the OpenVPN Service is running (with OpenVPN 1.5/1.6). Stop OpenVPN Service first if you want to use OpenVPN GUI."
     IDS_ERR_CREATE_EVENT "CreateEvent failed on exit event: %s"
@@ -190,8 +190,8 @@ BEGIN
     IDS_NFO_STATE_WAIT_TERM "Current State: Waiting for OpenVPN to terminate..."
     IDS_NFO_STATE_CONNECTED "Current State: Connected"
     IDS_NFO_NOW_CONNECTED "%s is now connected."
-    IDS_NFO_ASSIGN_IP "ÒÑ·ÖÅäµÄ IP: %s"
-    IDS_ERR_CERT_EXPIRED "²»ÄÜÁ¬½Ó£¬ÒòÎªÄúµÄÖ¤ÊéÒÑ¹ýÆÚ»òÏµÍ³Ê±¼ä²»ÕýÈ·¡£"
+    IDS_NFO_ASSIGN_IP "å·²åˆ†é…çš„ IP: %s"
+    IDS_ERR_CERT_EXPIRED "ä¸èƒ½è¿žæŽ¥ï¼Œå› ä¸ºæ‚¨çš„è¯ä¹¦å·²è¿‡æœŸæˆ–ç³»ç»Ÿæ—¶é—´ä¸æ­£ç¡®ã€‚"
     IDS_ERR_CERT_NOT_YET_VALID "Unable to connect because your certificate is not yet valid. Check that your system time is correct."
     IDS_NFO_STATE_RECONNECTING "Current State: Reconnecting"
     IDS_NFO_STATE_DISCONNECTED "Current State: Disconnected"
@@ -203,12 +203,12 @@ BEGIN
     IDS_NFO_STATE_SUSPENDED "Current State: Suspended"
     IDS_ERR_READ_STDOUT_PIPE "Error reading from OpenVPN StdOut Pipe."
     IDS_ERR_CREATE_EDIT_LOGWINDOW "Creating RichEdit LogWindow Failed!!"
-    IDS_ERR_SET_SIZE "ÉèÖÃ´óÐ¡Ê§°Ü£¡"
+    IDS_ERR_SET_SIZE "è®¾ç½®å¤§å°å¤±è´¥ï¼"
     IDS_ERR_AUTOSTART_CONF "Cannot find requested config to autostart: %s"
     IDS_ERR_CREATE_PIPE_IN_READ "CreatePipe on hInputRead failed."
-    IDS_NFO_STATE_CONNECTING "µ±Ç°×´Ì¬: ÕýÔÚÁ¬½Ó"
-    IDS_NFO_CONNECTION_XXX "OpenVPN Á¬½Ó (%s)"
-    IDS_NFO_STATE_CONN_SCRIPT "µ±Ç°×´Ì¬£º ÔËÐÐÁ¬½Ó½Å±¾"
+    IDS_NFO_STATE_CONNECTING "å½“å‰çŠ¶æ€: æ­£åœ¨è¿žæŽ¥"
+    IDS_NFO_CONNECTION_XXX "OpenVPN è¿žæŽ¥ (%s)"
+    IDS_NFO_STATE_CONN_SCRIPT "å½“å‰çŠ¶æ€ï¼š è¿è¡Œè¿žæŽ¥è„šæœ¬"
     IDS_NFO_STATE_DISCONN_SCRIPT "Current State: Running Disconnect Script"
     IDS_ERR_RUN_CONN_SCRIPT "Error running Connect Script: %s"
     IDS_ERR_GET_EXIT_CODE "Failed to get ExitCode of Connect Script (%s)"
@@ -267,9 +267,9 @@ BEGIN
     IDS_ERR_HTTP_PROXY_PORT "You must specify a HTTP proxy port."
     IDS_ERR_HTTP_PROXY_PORT_RANGE "You must specify a HTTP proxy port between 1-65535"
     IDS_ERR_SOCKS_PROXY_ADDRESS "You must specify a SOCKS proxy address."
-    IDS_ERR_SOCKS_PROXY_PORT "Äú±ØÐëÖ¸¶¨Ò»¸öÌ×½Ó×Ö´úÀí·þÎñÆ÷¶Ë¿Ú¡£"
-    IDS_ERR_SOCKS_PROXY_PORT_RANGE "Äú±ØÐëÖ¸¶¨Ò»¸öÌ×½Ó×Ö´úÀí·þÎñÆ÷¶Ë¿Ú½éÓÚ 1-65535 Ö®¼ä"
-    IDS_ERR_CREATE_REG_HKCU_KEY "´´½¨ ""HKEY_CURRENT_USER\\%s"" ¼üÊ±³ö´í¡£"
+    IDS_ERR_SOCKS_PROXY_PORT "æ‚¨å¿…é¡»æŒ‡å®šä¸€ä¸ªå¥—æŽ¥å­—ä»£ç†æœåŠ¡å™¨ç«¯å£ã€‚"
+    IDS_ERR_SOCKS_PROXY_PORT_RANGE "æ‚¨å¿…é¡»æŒ‡å®šä¸€ä¸ªå¥—æŽ¥å­—ä»£ç†æœåŠ¡å™¨ç«¯å£ä»‹äºŽ 1-65535 ä¹‹é—´"
+    IDS_ERR_CREATE_REG_HKCU_KEY "åˆ›å»º ""HKEY_CURRENT_USER\\%s"" é”®æ—¶å‡ºé”™ã€‚"
     IDS_ERR_GET_TEMP_PATH "Error determining TempPath with GetTempPath(). Using "" C:\\ "" instead."
 
     /* service */
@@ -289,10 +289,10 @@ BEGIN
     IDS_ERR_READING_REGISTRY "Error reading registry value (HKLM\\SOFTWARE\\OpenVPN)."
     IDS_ERR_PASSPHRASE_ATTEMPTS "Registry value ""passphrase_attempts"" must be a number between 1 and 9."
     IDS_ERR_CONN_SCRIPT_TIMEOUT "Registry value ""connectscript_timeout"" must be a number between 0 and 99."
-    IDS_ERR_DISCONN_SCRIPT_TIMEOUT "×¢²á±íÖµ ""disconnectscript_timeout"" ±ØÐëÊÇ½éÓÚ 1 ºÍ 99 Ö®¼äµÄÊý×Ö¡£"
+    IDS_ERR_DISCONN_SCRIPT_TIMEOUT "æ³¨å†Œè¡¨å€¼ ""disconnectscript_timeout"" å¿…é¡»æ˜¯ä»‹äºŽ 1 å’Œ 99 ä¹‹é—´çš„æ•°å­—ã€‚"
     IDS_ERR_PRECONN_SCRIPT_TIMEOUT "Registry value ""preconnectscript_timeout"" must be a number between 1 and 99."
     IDS_ERR_CREATE_REG_KEY "Error creating HKLM\\SOFTWARE\\OpenVPN-GUI key."
     IDS_ERR_OPEN_WRITE_REG "Failed to open the registry for writing. You need to run this application " "once as Administrator to update the registry."
-    IDS_ERR_READ_SET_KEY "¶ÁÈ¡ºÍÉèÖÃ×¢²á±í¼ü ""%s"" Ê±³ö´í¡£"
-    IDS_ERR_WRITE_REGVALUE "Ð´Èë×¢²á±íÖµ ""HKEY_CURRENT_USER\\%s\\%s"" Ê±³ö´í¡£"
+    IDS_ERR_READ_SET_KEY "è¯»å–å’Œè®¾ç½®æ³¨å†Œè¡¨é”® ""%s"" æ—¶å‡ºé”™ã€‚"
+    IDS_ERR_WRITE_REGVALUE "å†™å…¥æ³¨å†Œè¡¨å€¼ ""HKEY_CURRENT_USER\\%s\\%s"" æ—¶å‡ºé”™ã€‚"
 END
