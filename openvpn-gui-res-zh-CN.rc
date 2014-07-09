@@ -285,7 +285,7 @@ BEGIN
     /* registry */
     IDS_ERR_GET_WINDOWS_DIR "Error getting Windows Directory."
     IDS_ERR_GET_PROGRAM_DIR "Error getting ""Program"" folder name."
-    IDS_ERR_OPEN_REGISTRY "Error opening registry for reading (HKLM\\SOFTWARE\\OpenVPN).\n " "OpenVPN is probably not installed"
+    IDS_ERR_OPEN_REGISTRY "打开注册表读取时出错 (HKLM\\SOFTWARE\\OpenVPN)。\n " "OpenVPN 可能未安装"
     IDS_ERR_READING_REGISTRY "Error reading registry value (HKLM\\SOFTWARE\\OpenVPN)."
     IDS_ERR_PASSPHRASE_ATTEMPTS "Registry value ""passphrase_attempts"" must be a number between 1 and 9."
     IDS_ERR_CONN_SCRIPT_TIMEOUT "Registry value ""connectscript_timeout"" must be a number between 0 and 99."
