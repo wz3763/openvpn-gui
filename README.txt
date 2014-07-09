@@ -1,11 +1,14 @@
 ﻿OpenVPN GUI 新版简体中文化
 
+
 -------------------------------
 
-官方源代码没有简体中文的翻译，于是自己翻了一个。
+OpenVPN GUI 2.3 版本以及更新版本包含了一个新的 Windows GUI。
+
+但是这个 Windows GUI 没有简体中文的支持，于是自己翻译了一个。
 
 
-编译方法:
+支持简体中文的 OpenVPN GUI 编译方法:
 
   1.安装Cygwin -> www.cygwin.com
 
@@ -27,14 +30,16 @@
 
 ===============================
 
-  4.编译 openssl
+  4.下载 openvpn-gui-res-zh-CN.rc，放入 OpenVPN GUI git 源代码 res 目录下
+
+  5.编译 openssl
 
   cd openssl-1.0.1h
   ./Configure --cross-compile-prefix=i686-w64-mingw32- no-zlib mingw
   make
   make install
 
-  5.编译 OpenVPN GUI
+  6.编译 OpenVPN GUI
 
   cd openvpn-gui-code
   autoreconf -vif
