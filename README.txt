@@ -10,16 +10,18 @@ OpenVPN GUI 2.3 版本以及更新版本包含了一个新的 Windows GUI。
 
 支持简体中文的 OpenVPN GUI 编译方法:
 
-  1.安装Cygwin -> www.cygwin.com
+  1.安装 Cygwin -> www.cygwin.com
 
   2.安装包 make autoconf automake libtool mingw64-i686-*
 
   3.打下面的补丁
 
 ===============================
---- res/openvpn-gui-res-orig.rc	2014-07-08 01:47:32 +0100
-+++ res/openvpn-gui-res.rc	2014-07-07 01:21:06 +0100
-@@ -53,6 +53,7 @@
+diff --git a/res/openvpn-gui-res.rc b/res/openvpn-gui-res.rc
+index 70b4c82..88a8206 100644
+--- a/res/openvpn-gui-res.rc
++++ b/res/openvpn-gui-res.rc
+@@ -53,6 +53,7 @@ ID_ICO_DISCONNECTED  ICON  DISCARDABLE  "disconnected.ico"
  #include "openvpn-gui-res-ru.rc"
  #include "openvpn-gui-res-se.rc"
  #include "openvpn-gui-res-tr.rc"
