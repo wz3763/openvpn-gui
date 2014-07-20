@@ -181,7 +181,7 @@ BEGIN
     IDS_ERR_GET_MSIE_PROXY "无法获取 MSIE 代理服务器设置。"
     IDS_ERR_INIT_SEC_DESC "InitializeSecurityDescriptor 失败。"
     IDS_ERR_SET_SEC_DESC_ACL "SetSecurityDescriptorDacl 失败。"
-    IDS_ERR_CREATE_PIPE_OUTPUT "在 hOutputWrite 时 CreatePipe 失败。"
+    IDS_ERR_CREATE_PIPE_OUTPUT "CreatePipe 在 hOutputWrite 时失败。"
     IDS_ERR_CREATE_PIPE_INPUT "CreatePipe 在 hInputRead 时失败。."
     IDS_ERR_DUP_HANDLE_OUT_READ "DuplicateHandle 在 hOutputRead 时失败。"
     IDS_ERR_DUP_HANDLE_IN_WRITE "DuplicateHandle 在 hInputWrite 时失败。"
